@@ -4,8 +4,8 @@ const mongoose = require('mongoose');
 const app = express(); // creatinh express application
 
 // adding middlewares
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.json()); //parsing json requests
+app.use(express.urlencoded({ extended: true })); //parsinng url encoded requests
 
 
 mongoose.connect('mongodb://127.0.0.1:27017/newdb', { useNewUrlParser: true, useUnifiedTopology: true });
